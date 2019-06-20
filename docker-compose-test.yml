@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+  unittest:
+    image: golang:1.12
+    volumes:
+      - ./:/go/app
+    working_dir: /go/app
+    command: bash -c "go test --cover -v ./..."

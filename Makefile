@@ -7,7 +7,7 @@ build:
 
 start-server:
 	@echo "Running Server..."
-	docker-compose up -d
+	docker-compose up
 
 stop-server:
 	@echo "Stop Server..."
@@ -19,3 +19,6 @@ watch-logs:
 clean:
 	docker system prune -f
 	docker volume prune -f
+
+test:
+	 docker-compose -f docker-compose-test.yml run unittest
