@@ -11,7 +11,7 @@ services:
       - GO111MODULE=on
     volumes:
       - ./:/go/app
-    command: realize start --run --no-config
+    command: realize start --run
     ports:
       - 1323:1323
   # redis:

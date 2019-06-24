@@ -3,9 +3,15 @@ settings:
     force: false
     interval: 0s
 schema:
-- name: app
+- name: go-docker-hot-reload
   path: .
-  commands: {}
+  commands:
+    install:
+      status: true
+      method: go build -o /app
+    run:
+      status: true
+      method: /app
   watcher:
     extensions:
     - go
