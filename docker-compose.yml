@@ -14,9 +14,11 @@ services:
     command: realize start --run
     ports:
       - 1323:1323
-  # redis:
-  #   image: redis:4.0-alpine
-  #   container_name: 'redis'
-  #   ports:
-  #     - "6379:6379"
-  #   command: redis-server
+    depends_on:
+      - redis
+  redis:
+    image: redis:4.0-alpine
+    container_name: 'redis'
+    ports:
+      - "6379:6379"
+    command: redis-server
