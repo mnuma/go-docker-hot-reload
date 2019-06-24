@@ -23,7 +23,6 @@ func main() {
 		databaseName := "projects/gcpug-public-spanner/instances/merpay-sponsored-instance/databases/mnuma"
 
 		client, err := spanner.NewClient(ctx, databaseName)
-
 		if err != nil {
 			log.Fatalf("Failed to create client %v", err)
 		}
