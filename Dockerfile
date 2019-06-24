@@ -6,7 +6,7 @@ COPY . .
 
 RUN apk add --no-cache git \
  && go build -o app \
- && go get github.com/oxequa/realize
+ && go get -u github.com/oxequa/realize
 
 FROM alpine
 

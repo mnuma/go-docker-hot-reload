@@ -7,8 +7,11 @@ setup:
 build:
 	docker-compose build --no-cache
 
+modcache:
+	go clean -modcache
+
 start-server:
-	docker-compose up-d
+	docker-compose up -d
 	make watch-logs
 
 stop-server:
