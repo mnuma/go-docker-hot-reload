@@ -6,9 +6,12 @@ services:
       context: .
       target: build
     container_name: 'app'
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=./credential.json
+      - GO111MODULE=on
     volumes:
       - ./:/go/app
-    command: realize start --run --no-config
+    command: realize start --run
     ports:
       - 1323:1323
     depends_on:
